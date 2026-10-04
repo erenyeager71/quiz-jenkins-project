@@ -29,7 +29,7 @@ questions = [
 score = 0
 
 print("================================")
-print("       PYTHON QUIZ APP")
+print("       DEVOPS QUIZ APP")
 print("================================")
 
 for question in questions:
