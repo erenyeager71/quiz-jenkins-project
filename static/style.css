@@ -1,0 +1,343 @@
+/* ===== Base Reset & Page ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #e8ecf1;
+    color: #333;
+    min-height: 100vh;
+}
+
+a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Top Bar ===== */
+.topbar {
+    background: #1e293b;
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar .brand {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.topbar a {
+    color: #93c5fd;
+    font-size: 0.9rem;
+}
+
+/* ===== Centered Auth Card (Login / Signup) ===== */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 56px);
+    padding: 24px;
+}
+
+.auth-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 36px 32px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    color: #1e293b;
+}
+
+.auth-card label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.auth-card input:focus {
+    border-color: #3b82f6;
+}
+
+.auth-card .btn {
+    width: 100%;
+    padding: 12px;
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.auth-card .btn:hover {
+    background: #2563eb;
+}
+
+.auth-card .footer-link {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+/* Messages */
+.msg-error {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.msg-success {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+/* ===== Dashboard ===== */
+.dashboard {
+    max-width: 900px;
+    margin: 36px auto;
+    padding: 0 20px;
+}
+
+.dashboard h1 {
+    font-size: 1.6rem;
+    color: #1e293b;
+    margin-bottom: 28px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 24px;
+    flex: 1 1 240px;
+    min-width: 220px;
+}
+
+.card h3 {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+.start-btn {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 40px;
+    background: #22c55e;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.start-btn:hover {
+    background: #16a34a;
+    text-decoration: none;
+}
+
+/* ===== Quiz Page ===== */
+.quiz-wrapper {
+    max-width: 620px;
+    margin: 48px auto;
+    padding: 0 20px;
+}
+
+.quiz-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 36px 32px;
+}
+
+.quiz-card .q-number {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.quiz-card .q-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 24px;
+}
+
+/* Radio-as-button options */
+.options-list {
+    list-style: none;
+}
+
+.options-list li {
+    margin-bottom: 12px;
+}
+
+.options-list input[type="radio"] {
+    display: none;
+}
+
+.options-list label {
+    display: block;
+    padding: 14px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.15s;
+}
+
+.options-list label:hover {
+    border-color: #93c5fd;
+    background: #f0f7ff;
+}
+
+.options-list input[type="radio"]:checked + label {
+    border-color: #3b82f6;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+.quiz-card .btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 13px;
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quiz-card .btn:hover {
+    background: #2563eb;
+}
+
+/* ===== Result Page ===== */
+.result-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 56px);
+    padding: 24px;
+}
+
+.result-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 48px 40px;
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+}
+
+.result-card h1 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.result-card .score {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #22c55e;
+    margin-bottom: 32px;
+}
+
+.result-card .actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.result-card .actions a {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-green {
+    background: #22c55e;
+    color: #fff;
+}
+
+.btn-green:hover {
+    background: #16a34a;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-outline {
+    background: #fff;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+}
+
+.btn-outline:hover {
+    background: #eff6ff;
+    text-decoration: none;
+}

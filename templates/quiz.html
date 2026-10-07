@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="topbar">
+        <span class="brand">Quiz App</span>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+    <div class="quiz-wrapper">
+        <div class="quiz-card">
+            <p class="q-number">Question {{ number }} of {{ total }}</p>
+            <p class="q-text">{{ question.text }}</p>
+            {% if error %}
+            <div class="msg-error">{{ error }}</div>
+            {% endif %}
+            <form method="POST" action="{{ url_for('quiz') }}">
+                <ul class="options-list">
+                    {% for opt in question.options %}
+                    <li>
+                        <input type="radio" name="option" id="opt{{ loop.index0 }}" value="{{ loop.index0 }}">
+                        <label for="opt{{ loop.index0 }}">{{ opt }}</label>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <button type="submit" class="btn">Next</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
